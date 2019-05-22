@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190522 09:19:50.834" rpa="false">
+<suite id="s1" name="Logowanie klient" source="C:\Users\Testarmy\Desktop\Robot framework\FunedaTests\Logowanie_klient.robot">
+<kw name="Otworz Aplikacje Kliencka" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${APLIKACJA KLIENCKA LOGOWANIE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190522 09:19:55.439" level="INFO">Opening browser 'Chrome' to base url 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:19:55.439" endtime="20190522 09:20:15.580"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190522 09:20:15.580" endtime="20190522 09:20:16.799"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:19:55.439" endtime="20190522 09:20:16.800"></status>
+</kw>
+<test id="s1-t1" name="Bledny e-mail">
+<kw name="Logowanie">
+<arguments>
+<arg>invalid</arg>
+<arg>${POPRAWNE HASLO}</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:16.804" level="INFO">Typing text 'invalid' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:16.803" endtime="20190522 09:20:17.204"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:16.803" endtime="20190522 09:20:17.204"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:17.205" level="INFO">Typing text 'haslo123' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:17.205" endtime="20190522 09:20:17.355"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:17.205" endtime="20190522 09:20:17.355"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:17.356" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:17.356" endtime="20190522 09:20:17.709"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:17.355" endtime="20190522 09:20:17.710"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:18.712" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:17.710" endtime="20190522 09:20:18.712"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:18.740" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:18.713" endtime="20190522 09:20:18.740"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:18.740" endtime="20190522 09:20:19.084"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:16.802" endtime="20190522 09:20:19.084"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:16.800" endtime="20190522 09:20:19.085" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Bledne haslo">
+<kw name="Logowanie">
+<arguments>
+<arg>${POPRAWNY LOGIN}</arg>
+<arg>invalid</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:19.114" level="INFO">Typing text 'polytestuj+4@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:19.114" endtime="20190522 09:20:19.429"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:19.114" endtime="20190522 09:20:19.429"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:19.431" level="INFO">Typing text 'invalid' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:19.430" endtime="20190522 09:20:19.557"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:19.429" endtime="20190522 09:20:19.557"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:19.558" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:19.558" endtime="20190522 09:20:19.644"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:19.557" endtime="20190522 09:20:19.645"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:20.648" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:19.645" endtime="20190522 09:20:20.648"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:20.655" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:20.648" endtime="20190522 09:20:20.655"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:20.655" endtime="20190522 09:20:20.873"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:19.113" endtime="20190522 09:20:20.874"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:19.113" endtime="20190522 09:20:20.880" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Bledny e-mail i haslo">
+<kw name="Logowanie">
+<arguments>
+<arg>invalid</arg>
+<arg>whatewer</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:20.889" level="INFO">Typing text 'invalid' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:20.889" endtime="20190522 09:20:21.025"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:20.888" endtime="20190522 09:20:21.025"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:21.027" level="INFO">Typing text 'whatewer' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:21.026" endtime="20190522 09:20:21.173"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:21.025" endtime="20190522 09:20:21.173"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:21.174" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:21.174" endtime="20190522 09:20:21.264"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:21.173" endtime="20190522 09:20:21.264"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:22.266" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:21.265" endtime="20190522 09:20:22.266"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:22.281" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:22.267" endtime="20190522 09:20:22.283"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:22.283" endtime="20190522 09:20:22.471"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:20.887" endtime="20190522 09:20:22.471"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:20.886" endtime="20190522 09:20:22.473" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Pusty e-mail">
+<kw name="Logowanie">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${POPRAWNE HASLO}</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:22.476" level="INFO">Typing text '' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:22.476" endtime="20190522 09:20:22.546"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:22.475" endtime="20190522 09:20:22.546"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:22.547" level="INFO">Typing text 'haslo123' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:22.547" endtime="20190522 09:20:22.686"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:22.546" endtime="20190522 09:20:22.686"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:22.687" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:22.687" endtime="20190522 09:20:22.788"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:22.687" endtime="20190522 09:20:22.788"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:23.790" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:22.789" endtime="20190522 09:20:23.790"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:23.801" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:23.791" endtime="20190522 09:20:23.801"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:23.802" endtime="20190522 09:20:24.009"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:22.475" endtime="20190522 09:20:24.009"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:22.474" endtime="20190522 09:20:24.010" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Puste haslo">
+<kw name="Logowanie">
+<arguments>
+<arg>${POPRAWNY LOGIN}</arg>
+<arg>${EMPTY}</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:24.015" level="INFO">Typing text 'polytestuj+4@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:24.015" endtime="20190522 09:20:24.808"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:24.014" endtime="20190522 09:20:24.808"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:24.810" level="INFO">Typing text '' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:24.809" endtime="20190522 09:20:24.884"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:24.809" endtime="20190522 09:20:24.885"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:24.886" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:24.886" endtime="20190522 09:20:24.970"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:24.885" endtime="20190522 09:20:24.970"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:25.972" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:24.970" endtime="20190522 09:20:25.972"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:25.973" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:25.972" endtime="20190522 09:20:25.973"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:25.973" endtime="20190522 09:20:26.166"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:24.013" endtime="20190522 09:20:26.166"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:24.012" endtime="20190522 09:20:26.168" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Pusty e-mail i haslo">
+<kw name="Logowanie">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>https://qa-gex.funeda.pl/account/login</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:26.172" level="INFO">Typing text '' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:26.172" endtime="20190522 09:20:26.247"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:26.172" endtime="20190522 09:20:26.247"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:26.248" level="INFO">Typing text '' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:26.248" endtime="20190522 09:20:26.318"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:26.247" endtime="20190522 09:20:26.318"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:26.319" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:26.319" endtime="20190522 09:20:26.403"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:26.318" endtime="20190522 09:20:26.403"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:27.418" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:26.403" endtime="20190522 09:20:27.418"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:27.418" level="INFO">Current location is 'https://qa-gex.funeda.pl/account/login'.</msg>
+<status status="PASS" starttime="20190522 09:20:27.418" endtime="20190522 09:20:27.418"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:27.418" endtime="20190522 09:20:27.600"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:26.171" endtime="20190522 09:20:27.601"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:26.170" endtime="20190522 09:20:27.604" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Poprawne logowanie">
+<kw name="Logowanie">
+<arguments>
+<arg>${POPRAWNY LOGIN}</arg>
+<arg>${POPRAWNE HASLO}</arg>
+<arg>https://qa-gex.funeda.pl/dashboard/profile</arg>
+</arguments>
+<kw name="Wpisz login">
+<arguments>
+<arg>${e-mail}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${login}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:27.608" level="INFO">Typing text 'polytestuj+4@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20190522 09:20:27.608" endtime="20190522 09:20:27.875"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:27.608" endtime="20190522 09:20:27.875"></status>
+</kw>
+<kw name="Wpisz Haslo">
+<arguments>
+<arg>${haslo}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:27.876" level="INFO">Typing text 'haslo123' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190522 09:20:27.876" endtime="20190522 09:20:28.012"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:27.875" endtime="20190522 09:20:28.012"></status>
+</kw>
+<kw name="Potwierdz">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/div[1]/div/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190522 09:20:28.012" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20190522 09:20:28.012" endtime="20190522 09:20:28.102"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:28.012" endtime="20190522 09:20:28.103"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190522 09:20:29.105" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190522 09:20:28.103" endtime="20190522 09:20:29.106"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${adres}</arg>
+</arguments>
+<msg timestamp="20190522 09:20:29.121" level="INFO">Current location is 'https://qa-gex.funeda.pl/dashboard/profile'.</msg>
+<status status="PASS" starttime="20190522 09:20:29.106" endtime="20190522 09:20:29.122"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20190522 09:20:29.122" endtime="20190522 09:20:29.320"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:27.607" endtime="20190522 09:20:29.320"></status>
+</kw>
+<status status="PASS" starttime="20190522 09:20:27.606" endtime="20190522 09:20:29.321" critical="yes"></status>
+</test>
+<doc>Logowanie_klient</doc>
+<status status="PASS" starttime="20190522 09:19:50.837" endtime="20190522 09:20:29.324"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="Logowanie klient">Logowanie klient</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

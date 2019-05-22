@@ -1,0 +1,80 @@
+Index: Rejestracja.robot
+===================================================================
+--- Rejestracja.robot	(date 0)
++++ Rejestracja_klient.robot	(date 1558004957190)
+@@ -1,18 +1,30 @@
+ *** Settings ***
+-Documentation   Rejestracja
++Documentation   Rejestracja_klient
+ Library     SeleniumLibrary
+ Resource    Resources/Keywords.robot
+ Resource    Resources/Zatrudnienie.robot
++Suite Setup     Otworz Aplikacje Kliencka
++#Suite Teardown  Close Browser
++Test Template   Rejestracja
+ 
+-*** Test Cases ***
++*** Variables ***
++${BROWSER}                         Chrome
++${APLIKACJA KLIENCKA LOGOWANIE}    https://qa-gex.funeda.pl/account/login
++${APLIKACJA PRACOWNICZA}           https://backoffice.qa-gex.funeda.pl/
++${STRONA UZYTKOWNIKA}              https://qa-gex.funeda.pl/dashboard/profile
++${ADMIN DJANGO}                    https://api.qa-gex.funeda.pl/admin/login/?next=/admin/
++${POPRAWNY LOGIN}                  polytestuj+4@gmail.com
++${POPRAWNE HASLO}                  haslo123
+ 
+-Kalkulator
++*** Keywords ***
++
++Rejestracja
++    [Arguments]      ${Email}   ${Pesel}    ${Haslo}    ${Powtorz haslo}    ${Imie}     ${Nazwisko}     ${Numer dowodu}    ${Stan cywilny}  ${Ilosc osob na utrzymaniu}     ${Numer telefonu}      ${Ulica}     ${Numer budynku}        ${Numer lokalu}      ${Kod pocztowy}        ${Zatrudnienie}    ${Miesieczne wydatki}        ${Dodatkowe wydatki}             
+     Aplikacja kliencka
+     Maximize Browser Window
+     Wyslij
+     Sleep  3s
+ 
+-Rejestracja 1
+     Email   polytestuj+333@gmail.com
+     Pesel   19071243281
+     Haslo   Testuję789
+@@ -21,7 +33,6 @@
+     Zarejestruj
+     sleep  5s
+ 
+-Dane klienta
+     Imie  Poly333
+     Nazwisko  Testuj333
+     Numer dowodu  AVE412293
+@@ -30,7 +41,6 @@
+     Numer telefonu  609857889
+     DalejPersonalData
+ 
+-Adres
+     Ulica  Testowa
+     Numer budynku  333
+     Numer lokalu  1
+@@ -38,11 +48,9 @@
+     Kod pocztowy  33-333
+     DalejAdress
+ 
+-Zatrudnienie
+     UoP_okr
+     DalejZatrudnienie
+ 
+-Wydatki
+     Miesieczne wydatki  2300
+     Dodatkowe wydatki  300
+     Zgoda1
+@@ -55,7 +63,11 @@
+     Zgoda8
+     Wyslij wniosek
+ 
+-Intrastat
+     INGBank
+     INGLogin  fake42!
+ 
++
++*** Test Cases ***          E-MAIL          PESEL           HASLO       HASLO       IMIE    NAZWISKO    NR.DOWODU   STAN.CYWILNY    ILOSC.OS    NR.TEL      ULICA       NR.BUD  NR.MIESZ    MIASTO      KOD.P       MIES.WYD        DOD.WYD
++
++
++
