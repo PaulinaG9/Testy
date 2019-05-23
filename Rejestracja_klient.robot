@@ -14,7 +14,6 @@ ${APLIKACJA PRACOWNICZA}           https://backoffice.qa-gex.funeda.pl/
 ${STRONA UZYTKOWNIKA}              https://qa-gex.funeda.pl/dashboard/profile
 ${ADMIN DJANGO}                    https://api.qa-gex.funeda.pl/admin/login/?next=/admin/
 ${ING LOGIN}                       fake42!
-${POPRAWNE HASLO}                  haslo123
 
 *** Keywords ***
 
@@ -48,7 +47,7 @@ Rejestracja
     DalejAdress
 
     Typ zatrudnienia    ${Typ zatrudnienia}
-    Run Keyword if  ${Typ zatrudnienia}==1   UoP_okr
+    Run Keyword if  ${Typ zatrudnienia}==1    UoP_okr
     Run Keyword if  ${Typ zatrudnienia}==2    Projekt
     Run Keyword if  ${Typ zatrudnienia}==3    Samozatrudnienie
     Run Keyword if  ${Typ zatrudnienia}==4    Rencista_okr
@@ -82,7 +81,7 @@ Rejestracja
 
 *** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE    NAZWISKO  NR.DOWODU   STAN.CYWILNY  ILOSC.OS  NR.TEL      ULICA       NR.BUD  NR.MIESZ    MIASTO      KOD.P    TYP.ZATRUDNIENIA  MIES.WYD  DOD.WYD
 Poprawne dane UoP_okr         polytestuj+10@gmail.com     19071243281  Testuję789  Testuję789  Poly10  Testuj10  AVE412293   1             1         609857889   Testowa     1       1           Wrocek      11-111   1                 2100      500
-#Poprawne dane Projekt         polytestuj+11@gmail.com     66101353267  Testuję789  Testuję789  Poly11  Testuj11  KJP810690   2             2         765434567   Testowa     2       2           Kraków      22-222   2                 5000      800
+Poprawne dane Projekt         polytestuj+11@gmail.com     66101353267  Testuję789  Testuję789  Poly11  Testuj11  KJP810690   2             2         765434567   Testowa     2       2           Kraków      22-222   2                 5000      800
 #Poprawne dane Samozatr        polytestuj+12@gmail.com     46112639079  Testuję789  Testuję789  Poly12  Testuj12  ASW188603   2             1         758362436   Testowa     3       3           Warszawa    33-333   3                 5000      800
 #Poprawne dane Renta           polytestuj+13@gmail.com     95040321565  Testuję789  Testuję789  Poly13  Testuj13  JWF706407   2             3         986243749   Testowa     4       4           Bytom       44-444   4                 5000      800
 #Poprawne dane Student         polytestuj+14@gmail.com     03102394394  Testuję789  Testuję789  Poly14  Testuj14  WUL587436   2             4         564839275   Testowa     5       5           Ustroń      55-555   5                 5000      800

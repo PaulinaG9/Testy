@@ -3,7 +3,7 @@ Documentation   UsunUsera
 Library     SeleniumLibrary
 Resource   Resources/Keywords.robot
 Suite Setup     Otworz Admina Django i zaloguj
-#Suite Teardown  Close Browser
+Suite Teardown  Close Browser
 Test Template   Wyszukaj i usun usera
 
 *** Variables ***
@@ -25,7 +25,7 @@ Wyszukaj i usun usera
     UsunUsera  1
     Reload Page
 
-    #WyszukajiUsunUsera
+
 Otworz Admina Django i zaloguj
     Open Browser    ${ADMIN DJANGO}   ${BROWSER}
     Maximize Browser Window
@@ -35,8 +35,13 @@ Otworz Admina Django i zaloguj
 
 
 *** Test Cases ***          #{e-mail}
-#polytestuj+10@gamil.com     polytestuj+10@gmail.com
-#polytestuj+11@gmail.com     polytestuj+11@gmail.com
+polytestuj+10@gamil.com     polytestuj+10@gmail.com
+polytestuj+11@gmail.com     polytestuj+111@gmail.com
 #polytestuj+12@gmail.com     polytestuj+12@gmail.com
-polytestuj+13@gmail.com     polytestuj+13@gmail.com
-polytestuj+14@gmail.com     polytestuj+14@gmail.com
+#polytestuj+13@gmail.com     polytestuj+13@gmail.com
+#polytestuj+14@gmail.com     polytestuj+14@gmail.com
+#polytestuj+15@gmail.com     polytestuj+15@gmail.com
+#polytestuj+16@gmail.com     polytestuj+16@gmail.com
+#polytestuj+17@gmail.com     polytestuj+17@gmail.com
+#polytestuj+18@gmail.com     polytestuj+18@gmail.com
+#polytestuj+19@gmail.com     polytestuj+19@gmail.com

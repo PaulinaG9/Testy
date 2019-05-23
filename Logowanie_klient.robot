@@ -11,8 +11,8 @@ ${APLIKACJA KLIENCKA LOGOWANIE}    https://qa-gex.funeda.pl/account/login
 ${APLIKACJA PRACOWNICZA}           https://backoffice.qa-gex.funeda.pl/
 ${STRONA UZYTKOWNIKA}              https://qa-gex.funeda.pl/dashboard/profile
 ${ADMIN DJANGO}                    https://api.qa-gex.funeda.pl/admin/login/?next=/admin/
-${POPRAWNY LOGIN}                  polytestuj+4@gmail.com
-${POPRAWNE HASLO}                  haslo123
+${POPRAWNY LOGIN}                  polytestuj+10@gmail.com
+${POPRAWNE HASLO}                  Tesuję789
 
 *** Keywords ***
 

@@ -30,4 +30,4 @@ UsunUsera
     Select From List By Index  name=action  ${Usun}
     Click Element  xpath=//*[@id="changelist-form"]/div[1]/button
     Click Element  xpath=//*[@id="content"]/form/div/input[4]
-    Clear Element Text  name=q
+    Click Element  xpath=//*[@id="container"]/div[2]/a[1]
