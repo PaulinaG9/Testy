@@ -5,6 +5,12 @@ Otworz Aplikacje Kliencka
     Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
     Maximize Browser Window
 
+Otworz Aplikacje Kliencka Wyslij
+    Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
+    Maximize Browser Window
+    Wyslij
+    Sleep  2s
+
 Wyslij
     Click button  xpath=//*[@id="root"]/div/button
 
@@ -26,23 +32,23 @@ Powtorz haslo
     Input Text  name=passwordConfirm     ${Powtorz haslo}
 
 Zgoda
-    Click Element     xpath=//*[@id="root"]/div/div[1]/div/div[2]/div[5]/div/label[1]/span
+    Click Element     xpath=//*[@id="root"]/div/div[2]/div[1]/div[2]/div[5]/div/label[1]/span
 
 Zarejestruj
-    Click Button    xpath=//*[@id="root"]/div/div[1]/div/div[3]/button
+    Click Button    xpath=//*[@id="root"]/div/div[2]/div[1]/div[3]/button
 
 #Dane klienta
 Imie
     [Arguments]      ${Imie}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[1]/label/div[1]/input    ${Imie}
+    Input Text  name=first_name    ${Imie}
 
 Nazwisko
     [Arguments]      ${Nazwisko}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[2]/label/div[1]/input    ${Nazwisko}
+    Input Text  name=last_name   ${Nazwisko}
 
 Numer dowodu
     [Arguments]      ${Numer dowodu}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[3]/label/div[1]/input    ${Numer dowodu}
+    Input Text  name=id_card_number    ${Numer dowodu}
 
 Stan cywilny
     [Arguments]      ${Stan cywilny}
@@ -134,3 +140,4 @@ INGLogin
 Wyloguj
     Sleep  3s
     Click Button  xpath=//*[@id="root"]/div/div[1]/form/button
+
