@@ -3,6 +3,7 @@ Documentation   Rejestracja_klient
 Library     SeleniumLibrary
 Resource    Resources/Bledy.robot
 Resource    Resources/Keywords_rejestracja.robot
+Resource    Resources/Keywords.robot
 Suite Setup     Otworz Aplikacje Kliencka Wyslij
 Suite Teardown  Close Browser
 Test Template   Rejestracja
@@ -38,10 +39,10 @@ Rejestracja
 
 *** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO        ZGODA    B.MAIL    B.PESEL    B.HASLO    B.HASLO2    B.ZGODY      TEKST
 Niepoprawny mail              polytestuj+40gmail.com      19071243281  Testuję789  Testuję789   1        1         0          0          0           0            Wpisz poprawny adres e-mail.
-Niepoprawny pesel             polytestuj+41@gmail.com     661a0133267  Testuję789  Testuję789   1        0         1          0          0           0            Numer PESEL powinnien składac się z 11 cyfr.
-Niepoprawne haslo             polytestuj+42@gmail.com     46112639079  Test789     Test789      1        0         0          1          0           0            To pole musi mieć co najmiej 8 znaków.
-Niepoprawne drugie haslo      polytestuj+44@gmail.com     03102394394  Testuję789  Testuję987   1        0         0          0          1           0            Hasła się nie zgadzają.
-Brak zgody                    polytestuj+45@gmail.com     58030798169  Testuję789  Testuję789   0        0         0          0          0           1            Musisz zatwierdzić zgode na przetwarzanie adresu e-mail.
-Pusty mail                    ${EMPTY}                    08071598460  Testuję789  Testuję789   1        1         0          0          0           0            To pole jest wymagane.
-Pusty pesel                   polytestuj+47@gmail.com     ${EMPTY}     Testuję789  Testuję789   1        0         1          0          0           0            To pole jest wymagane.
-Puste haslo                   polytestuj+48@gmail.com     85080476437  ${EMPTY}    Testuję789   1        0         0          1          0           0            To pole jest wymagane.
+#Niepoprawny pesel             polytestuj+41@gmail.com     661a0133267  Testuję789  Testuję789   1        0         1          0          0           0            Numer PESEL powinnien składac się z 11 cyfr.
+#Niepoprawne haslo             polytestuj+42@gmail.com     46112639079  Test789     Test789      1        0         0          1          0           0            To pole musi mieć co najmiej 8 znaków.
+#Niepoprawne drugie haslo      polytestuj+44@gmail.com     03102394394  Testuję789  Testuję987   1        0         0          0          1           0            Hasła się nie zgadzają.
+#Brak zgody                    polytestuj+45@gmail.com     58030798169  Testuję789  Testuję789   0        0         0          0          0           1            Musisz zatwierdzić zgode na przetwarzanie adresu e-mail.
+#Pusty mail                    ${EMPTY}                    08071598460  Testuję789  Testuję789   1        1         0          0          0           0            To pole jest wymagane.
+#Pusty pesel                   polytestuj+47@gmail.com     ${EMPTY}     Testuję789  Testuję789   1        0         1          0          0           0            To pole jest wymagane.
+#Puste haslo                   polytestuj+48@gmail.com     85080476437  ${EMPTY}    Testuję789   1        0         0          1          0           0            To pole jest wymagane.

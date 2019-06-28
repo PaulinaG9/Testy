@@ -3,6 +3,7 @@ Documentation   Rejestracja_klient
 Library     SeleniumLibrary
 Resource    Resources/Bledy.robot
 Resource    Resources/Keywords_rejestracja.robot
+Resource    Resources/Keywords.robot
 #Suite Setup     Otworz Aplikacje Kliencka
 #Suite Teardown  Close Browser
 Test Template   Rejestracja
@@ -47,9 +48,9 @@ Rejestracja
     Run Keyword if  ${Brak Danych}==1   Brak danych adres   ${Tekst}
     ...    ELSE IF  ${B.Kod.Pocztowy}==1    Blad kod.pocztowy   ${Tekst}
 
-    #Close Browser
+    Close Browser
 
 
 *** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE    NAZWISKO  NR.DOWODU   STAN.CYWILNY  ILOSC.OS  NR.TEL      ULICA       NR.BUD    NR.MIESZ    MIASTO      KOD.P      BRAKDANYCH  B.KOD.POCZTOWY  TEKST
-Brak danych                   polytestuj+31@gmail.com     07062582882  Testuję789  Testuję789  Poly10  Testuj10  AVE412293   1             1         609857889   ${EMPTY}    ${EMPTY}  ${EMPTY}    ${EMPTY}    ${EMPTY}   1           0               Pole jest wymagane.
-Bledny kod                    polytestuj+32@gmail.com     30123120392  Testuję789  Testuję789  Poly11  Testuj11  KJP810690   2             2         765434567   Testowa     2         2           Kraków      22-22      0           1               Pole musi się zgadzać z formatem.
+Brak danych                   polytestuj+30@gmail.com     07062582882  Testuję789  Testuję789  Poly10  Testuj10  AVE412293   1             1         609857889   ${EMPTY}    ${EMPTY}  ${EMPTY}    ${EMPTY}    ${EMPTY}   1           0               Pole jest wymagane.
+Bledny kod                    polytestuj+31@gmail.com     30123120392  Testuję789  Testuję789  Poly11  Testuj11  KJP810690   2             2         765434567   Testowa     2         2           Kraków      22-22      0           1               Pole musi się zgadzać z formatem.

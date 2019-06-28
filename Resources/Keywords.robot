@@ -1,5 +1,60 @@
 *** Keywords ***
 
+#Kalkulator
+Otworz Aplikacje Kliencka
+    Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
+    Maximize Browser Window
+
+Otworz Aplikacje Kliencka Wyslij
+    Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
+    Maximize Browser Window
+    Wait Until Page Contains  Kalkulator pożyczki
+    Wyslij
+
+
+Otworz Aplikacje Kliencka Logowanie
+    Open Browser    ${APLIKACJA KLIENCKA LOGOWANIE}   ${BROWSER}
+    Maximize Browser Window
+
+Otworz Aplikacje Pracownicza Logowanie
+    Open Browser    ${APLIKACJA PRACOWNICZA}   ${BROWSER}
+    Maximize Browser Window
+    Click Element  xpath=//*[@id="root"]/div/div/div[2]/div/a
+
+Wyslij
+    Click button  xpath=//*[@id="root"]/div/button
+
+Logowanie klient
+    [Arguments]     ${e-mail}   ${haslo}
+    Otworz Aplikacje Kliencka Logowanie
+    Wpisz login uzytkownika    ${e-mail}
+    Wpisz Haslo uzytkownika    ${haslo}
+    Potwierdz Logowanie
+
+Wpisz login uzytkownika
+    [Arguments]      ${login}
+    Input Text  name=email     ${login}
+
+Wpisz Haslo uzytkownika
+    [Arguments]      ${password}
+    Input Text  name=password     ${password}
+
+Potwierdz Logowanie
+    Click button    xpath=//*[@id="root"]/div/div[2]/div[1]/div[2]/button
+
+Wpisz login pracownika
+    [Arguments]      ${login}
+    Input Text  name=email     ${login}
+
+Wpisz Haslo pracownika
+    [Arguments]      ${password}
+    Input Text  name=password     ${password}
+
+Potwierdz Logowanie pracownika
+    Click button    xpath=//*[@id="root"]/div/div/div[2]/div/div/form/div[2]/button
+
+Strona pracownicza
+    Location Should Be  https://backoffice.qa-gex.funeda.pl/origination
 
 EmailAdmin
     [Arguments]      ${EmailAdmin}
@@ -31,3 +86,10 @@ UsunUsera
     Click Element  xpath=//*[@id="changelist-form"]/div[1]/button
     Click Element  xpath=//*[@id="content"]/form/div/input[4]
     Click Element  xpath=//*[@id="container"]/div[2]/a[1]
+
+Wyloguj klienta
+    Sleep  3s
+    Click Button  xpath=//*[@id="root"]/div/div[1]/form/button
+
+
+

@@ -1,11 +1,10 @@
 *** Settings ***
 Documentation   Rejestracja_klient
 Library     SeleniumLibrary
-Resource    Resources/Bledy.robot
-Resource    Resources/Keywords_rejestracja.robot
 Resource    Resources/Zatrudnienie.robot
+Resource    Resources/Keywords_rejestracja.robot
 Resource    Resources/Keywords.robot
-#Suite Setup     Otworz Aplikacje Kliencka Wyslij
+#Suite Setup     Otworz Aplikacje Kliencka
 #Suite Teardown  Close Browser
 Test Template   Rejestracja
 
@@ -20,8 +19,9 @@ ${ING LOGIN}                       fake42!
 *** Keywords ***
 
 Rejestracja
-    [Arguments]      ${Email}   ${Pesel}    ${Haslo}    ${Powtorz haslo}    ${Imie}     ${Nazwisko}     ${Numer dowodu}    ${Stan cywilny}  ${Ilosc osob na utrzymaniu}     ${Numer telefonu}      ${Ulica}     ${Numer budynku}        ${Numer lokalu}    ${Miasto}   ${Kod pocztowy}     ${Typ zatrudnienia}     ${Miesieczne wydatki}    ${Dodatkowe wydatki}  ${Brak Danych}   ${Tekst}
+    [Arguments]      ${Email}   ${Pesel}    ${Haslo}    ${Powtorz haslo}    ${Imie}     ${Nazwisko}     ${Numer dowodu}    ${Stan cywilny}  ${Ilosc osob na utrzymaniu}     ${Numer telefonu}      ${Ulica}     ${Numer budynku}        ${Numer lokalu}    ${Miasto}   ${Kod pocztowy}     ${Typ zatrudnienia}     ${Miesieczne wydatki}    ${Dodatkowe wydatki}
     Otworz Aplikacje Kliencka Wyslij
+
     Email   ${Email}
     Pesel   ${Pesel}
     Haslo   ${Haslo}
@@ -60,12 +60,27 @@ Rejestracja
 
     Miesieczne wydatki  ${Miesieczne wydatki}
     Dodatkowe wydatki  ${Dodatkowe wydatki}
+    Zgoda1
+    Zgoda2
+    Zgoda3
+    Zgoda4
+    Zgoda5
+    Zgoda6
+    Zgoda7
+    Zgoda8
     Wyslij wniosek
 
-    Run Keyword if  ${Brak Danych}==1  Brak danych wydatki     ${Tekst}
-    Brak zgod  ${Tekst}
+    INGBank
+    INGLogin  fake42!
 
+
+    Wyloguj klienta
+    Sleep  2s
     Close Browser
 
-*** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE       NAZWISKO   NR.DOWODU   STAN.CYWILNY  ILOSC.OS  NR.TEL      ULICA       NR.BUD    NR.MIESZ    MIASTO      KOD.P    TYP.ZATRUDNIENIA  MIES.WYD   DOD.WYD    BRAKDANYCH     TEKST
-Brak danych                   polytestuj+50@gmail.com     95090138252  Testuję789  Testuję789  Poly60     Testuj60   SUT933949   1             1         567654345   Test        50        5           City        54-555   5                 ${EMPTY}   ${EMPTY}   1              Pole jest wymagane.
+    Otworz Aplikacje Pracownicza Logowanie
+
+
+
+*** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE    NAZWISKO  NR.DOWODU   STAN.CYWILNY  ILOSC.OS  NR.TEL      ULICA       NR.BUD  NR.MIESZ    MIASTO      KOD.P    TYP.ZATRUDNIENIA  MIES.WYD  DOD.WYD
+SAS failed                    polytestuj+119@gmail.com     13060623977  Testuję789  Testuję78 9  Poly19  Testuj19  JLV022850   2             1         463829266   Testowa     10      10          Sopot       10-1010  10                5000      800

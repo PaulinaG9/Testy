@@ -1,19 +1,5 @@
 *** Keywords ***
 
-#Kalkulator
-Otworz Aplikacje Kliencka
-    Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
-    Maximize Browser Window
-
-Otworz Aplikacje Kliencka Wyslij
-    Open Browser    ${APLIKACJA KLIENCKA REJESTRACJA}   ${BROWSER}
-    Maximize Browser Window
-    Wyslij
-    Sleep  2s
-
-Wyslij
-    Click button  xpath=//*[@id="root"]/div/button
-
 #Rejestracja1
 Email
     [Arguments]      ${Email}
@@ -35,7 +21,7 @@ Zgoda
     Click Element     xpath=//*[@id="root"]/div/div[2]/div[1]/div[2]/div[5]/div/label[1]/span
 
 Zarejestruj
-    Click Button    xpath=//*[@id="root"]/div/div[2]/div[1]/div[3]/button
+    Click Button    Zarejestruj się
 
 #Dane klienta
 Imie
@@ -63,31 +49,31 @@ Numer telefonu
     Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[6]/div/label/div/input    ${Numer telefonu}
 
 DalejPersonalData
-    Click Button  xpath=//*[@id="root"]/div/div[2]/div/div[3]/button
+    Click Button  Dalej
 
 #Adres
 Ulica
     [Arguments]      ${Ulica}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[1]/label/div[1]/input  ${Ulica}
+    Input Text  name=street  ${Ulica}
 
 Numer budynku
     [Arguments]      ${Numer budynku}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[2]/label/div[1]/input  ${Numer budynku}
+    Input Text  name=house_number  ${Numer budynku}
 
 Numer lokalu
     [Arguments]      ${Numer lokalu}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[3]/label/div/input  ${Numer lokalu}
+    Input Text  name=apartment_number  ${Numer lokalu}
 
 Miasto
     [Arguments]      ${Miasto}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[4]/label/div[1]/input  ${Miasto}
+    Input Text  name=city  ${Miasto}
 
 Kod pocztowy
     [Arguments]      ${Kod pocztowy}
-    Input Text  xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[5]/div/label/div[1]/input  ${Kod pocztowy}
+    Input Text  name=postal_code  ${Kod pocztowy}
 
 DalejAdress
-    Click Button  xpath=//*[@id="root"]/div/div[2]/div/div[3]/button[2]
+    Click Button  Dalej
 
 #Wydatki
 Miesieczne wydatki
@@ -117,27 +103,37 @@ Zgoda7
 Zgoda8
     Click Element     xpath=//*[@id="root"]/div/div[2]/div/div[2]/div[11]/div/div/label[1]/span
 Wyslij wniosek
-    Click Button    xpath=//*[@id="root"]/div/div[2]/div/div[3]/button[2]
+    Click Button    Wyślij
 
 INGBank
-    Sleep  5s
-    Select frame   xpath=//iframe[@name='instantor']
-  #  Page should contain element     xpath=//*[@id="bank-list-chooser-section"]/div[1]/div[2]
-    Click element  xpath=//*[@id="bank-list-chooser-section"]/div[1]/div[2]
+    Wait Until Element Is Visible  id=instantor
+    Select frame   id=instantor
+    Wait Until Element Is Visible  xpath=//*[@id="bank-list-chooser-section"]/div[1]/div[2]
+    Click Element  xpath=//*[@id="bank-list-chooser-section"]/div[1]/div[2]
 
 INGLogin
     Unselect Frame
-    Sleep  3s
-    Select frame  xpath=//iframe[@name='instantor']
+    Select frame  id=instantor
+    Wait Until Element Is Visible  id=field_01
     [Arguments]     ${INGlogin}
     Input Text  id=field_01  ${INGlogin}
+    Sleep  1s
     Click Element   id=terms_and_conditions
     Click Element   id=privacy_policy
     Click Element   xpath=//*[@id="main-content"]/div/div/div/div/form/button
-    Sleep  7s
-    Page should contain element  xpath=//*[@id="root"]/div/div[1]/img
+    Wait Until Element Is Visible  xpath=//*[@id="root"]/div/div[1]/img
 
-Wyloguj
-    Sleep  3s
-    Click Button  xpath=//*[@id="root"]/div/div[1]/form/button
+INGHaslo
+    Unselect Frame
+    Wait Until Element Is Visible  id=instantor
+    Select frame  id=instantor
+    [Arguments]     ${INGhaslo2}  ${INGhaslo5}  ${INGhaslo7}  ${INGhaslo8}  ${INGhaslo9}
+    Input Text  id=fld_1  ${INGhaslo2}
+    Input Text  id=fld_4  ${INGhaslo5}
+    Input Text  id=fld_6  ${INGhaslo7}
+    Input Text  id=fld_7  ${INGhaslo8}
+    Input Text  id=fld_8  ${INGhaslo9}
+    Click Element  xpath=//*[@id="main-content"]/div/div/div/div/form/button
+
+
 

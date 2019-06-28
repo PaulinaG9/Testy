@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation   Logowanie_klient
 Library         SeleniumLibrary
-Suite Setup     Otworz Aplikacje Kliencka
+Resource   Resources/Keywords.robot
+Suite Setup     Otworz Aplikacje Kliencka Logowanie
 #Suite Teardown  Close Browser
 Test Template   Logowanie
 
@@ -18,30 +19,13 @@ ${POPRAWNE HASLO}                  Tesuję789
 
 Logowanie
     [Arguments]     ${e-mail}   ${haslo}    ${adres}
-    Wpisz login     ${e-mail}
-    Wpisz Haslo     ${haslo}
-    Potwierdz
+    Wpisz login uzytkownika    ${e-mail}
+    Wpisz Haslo uzytkownika     ${haslo}
+    Potwierdz Logowanie
     Sleep  1s
     Location Should Be  ${adres}
     Reload Page
 
-Otworz Aplikacje Kliencka
-    Open Browser    ${APLIKACJA KLIENCKA LOGOWANIE}   ${BROWSER}
-    Maximize Browser Window
-
-Wpisz login
-    [Arguments]      ${login}
-    Input Text  name=email     ${login}
-
-Wpisz Haslo
-    [Arguments]      ${password}
-    Input Text  name=password     ${password}
-
-Potwierdz
-    Click button    xpath=//*[@id="root"]/div/div[1]/div/div[3]/button
-
-Strona uzytkownika
-    Location Should Be  https://qa-gex.funeda.pl/dashboard/profile
 
 *** Test Cases ***           E-MAIL             HASLO                   ADRES
 Bledny e-mail                invalid            ${POPRAWNE HASLO}       https://qa-gex.funeda.pl/account/login
@@ -50,4 +34,5 @@ Bledny e-mail i haslo        invalid            whatewer                https://
 Pusty e-mail                 ${EMPTY}           ${POPRAWNE HASLO}       https://qa-gex.funeda.pl/account/login
 Puste haslo                  ${POPRAWNY LOGIN}  ${EMPTY}                https://qa-gex.funeda.pl/account/login
 Pusty e-mail i haslo         ${EMPTY}           ${EMPTY}                https://qa-gex.funeda.pl/account/login
+#Nieistniejace konto
 Poprawne logowanie           ${POPRAWNY LOGIN}  ${POPRAWNE HASLO}       https://qa-gex.funeda.pl/dashboard/profile

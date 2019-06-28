@@ -3,6 +3,7 @@ Documentation   Rejestracja_klient
 Library     SeleniumLibrary
 Resource    Resources/Bledy.robot
 Resource    Resources/Keywords_rejestracja.robot
+Resource    Resources/Keywords.robot
 #Suite Setup     Otworz Aplikacje Kliencka Wyslij
 #Suite Teardown  Close Browser
 Test Template   Rejestracja

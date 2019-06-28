@@ -4,6 +4,7 @@ Library     SeleniumLibrary
 Resource    Resources/Bledy.robot
 Resource    Resources/Keywords_rejestracja.robot
 Resource    Resources/Zatrudnienie.robot
+Resource    Resources/Keywords.robot
 #Suite Setup     Otworz Aplikacje Kliencka Wyslij
 #Suite Teardown  Close Browser
 Test Template   Rejestracja
@@ -50,7 +51,7 @@ Rejestracja
  #   ...  ELSE IF  ${B.Nr.Dowodu}==1  Blad nr.dowodu     ${Tekst}
   #  ...  ELSE IF  ${B.Nr.Tel}==1  Blad nr.tel   ${Tekst}
 
- #Close Browser
+    Close Browser
 
-*** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE       NAZWISKO   NR.DOWODU   STAN.CYWILNY  ILOSC.OS   NR.TEL     ULICA       NR.BUD    NR.MIESZ    MIASTO      KOD.P    BRAKDANYCH     TEKST
-Brak danych                   polytestuj+50@gmail.com     83110175666  Testuję789  Testuję789  Poly50     Testuj50   SUT933949  1             1          567654345   Test        50        5           City        54-555   1              Pole jest wymagane.
+*** Test Cases ***            E-MAIL                      PESEL        HASLO       HASLO       IMIE       NAZWISKO   NR.DOWODU   STAN.CYWILNY  ILOSC.OS   NR.TEL       ULICA       NR.BUD    NR.MIESZ    MIASTO      KOD.P    BRAKDANYCH     TEKST
+Brak danych                   polytestuj+44@gmail.com     90071403992  Testuję789  Testuję789  Poly40     Testuj40   SUT933949   1             1           567654345   Test        50        5           City        54-555   1              Pole jest wymagane.

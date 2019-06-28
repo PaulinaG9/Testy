@@ -36,12 +36,12 @@ Otworz Admina Django i zaloguj
 
 *** Test Cases ***          #{e-mail}
 polytestuj+10@gamil.com     polytestuj+10@gmail.com
-polytestuj+11@gmail.com     polytestuj+111@gmail.com
-#polytestuj+12@gmail.com     polytestuj+12@gmail.com
-#polytestuj+13@gmail.com     polytestuj+13@gmail.com
-#polytestuj+14@gmail.com     polytestuj+14@gmail.com
-#polytestuj+15@gmail.com     polytestuj+15@gmail.com
-#polytestuj+16@gmail.com     polytestuj+16@gmail.com
-#polytestuj+17@gmail.com     polytestuj+17@gmail.com
-#polytestuj+18@gmail.com     polytestuj+18@gmail.com
-#polytestuj+19@gmail.com     polytestuj+19@gmail.com
+#polytestuj+11@gmail.com     polytestuj+11@gmail.com
+polytestuj+20@gmail.com     polytestuj+20@gmail.com
+polytestuj+21@gmail.com     polytestuj+21@gmail.com
+polytestuj+22@gmail.com     polytestuj+22@gmail.com
+polytestuj+23@gmail.com     polytestuj+23@gmail.com
+polytestuj+30@gmail.com     polytestuj+30@gmail.com
+polytestuj+31@gmail.com     polytestuj+31@gmail.com
+polytestuj+44@gmail.com     polytestuj+44@gmail.com
+polytestuj+50@gmail.com     polytestuj+50@gmail.com
