@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f1679d2-e82e-47e1-ab52-cea4a6eee285" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/K_dodaj_karte.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logowanie_pracownik.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test1_E2E.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logowanie_klient.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Logowanie_klient.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IEDriverServer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/K_dodaj_karte.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Dodaj_karte_klient.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MicrosoftWebDriver.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Rejestracja1_klient.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja1_klient.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rejestracja2_klient_adres.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja2_klient_adres.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rejestracja2_klient_dane.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja2_klient_dane.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rejestracja2_klient_wydatki.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja2_klient_wydatki.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rejestracja2_klient_zatrudnienie.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja2_klient_zatrudnienie.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rejestracja_klient.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Rejestracja_klient.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Keywords_rejestracja.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Keywords_rejestracja.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsunUsera.robot" beforeDir="false" afterPath="$PROJECT_DIR$/UsunUsera.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResetHasla_klient.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Reseth_hasla_klient.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test1_E2E.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
@@ -30,15 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rejestracja_klient.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/Keywords.robot">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,19 +38,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Keywords_rejestracja.robot">
+        <entry file="file://$PROJECT_DIR$/Rejestracja1_klient.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2346">
-              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+            <state relative-caret-position="593">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test1_E2E.robot">
+        <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_adres.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="85" column="94" selection-start-line="85" selection-start-column="94" selection-end-line="85" selection-end-column="94" />
+            <state relative-caret-position="-206" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_dane.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-104" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_wydatki.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-444" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_zatrudnienie.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-206" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rejestracja_klient.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Keywords_rejestracja.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2346">
+              <caret line="138" selection-start-line="138" selection-end-line="138" />
             </state>
           </provider>
         </entry>
@@ -112,20 +138,20 @@
         <option value="$PROJECT_DIR$/Logowanie_pracownik.robot" />
         <option value="$PROJECT_DIR$/UsunUsera.robot" />
         <option value="$PROJECT_DIR$/K_dodaj_karte.robot" />
-        <option value="$PROJECT_DIR$/Rejestracja1_klient.robot" />
         <option value="$PROJECT_DIR$/Resources/Zatrudnienie.robot" />
         <option value="$PROJECT_DIR$/Test1_E2E.robot" />
         <option value="$PROJECT_DIR$/Resources/Keywords.robot" />
         <option value="$PROJECT_DIR$/Resources/Keywords_rejestracja.robot" />
+        <option value="$PROJECT_DIR$/Rejestracja1_klient.robot" />
         <option value="$PROJECT_DIR$/Rejestracja_klient.robot" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1358" />
-    <option name="y" value="-447" />
-    <option name="width" value="1936" />
-    <option name="height" value="733" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1479" />
+    <option name="y" value="-62" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -140,6 +166,11 @@
               <item name="FunedaTests" type="b2602c69:ProjectViewProjectNode" />
               <item name="FunedaTests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FunedaTests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FunedaTests" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -150,10 +181,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FunedaTests-kopia2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -214,8 +245,8 @@
   <component name="ToolWindowManager">
     <frame x="1358" y="-447" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.70204604" visible="true" weight="0.19494204" />
-      <window_info id="Structure" order="1" sideWeight="0.29795396" side_tool="true" visible="true" weight="0.19494204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.69107854" visible="true" weight="0.19494204" />
+      <window_info id="Structure" order="1" sideWeight="0.30892143" side_tool="true" visible="true" weight="0.19494204" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32949087" />
@@ -228,7 +259,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2502397" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27996165" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32756963" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32840723" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -240,6 +271,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Testy" />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Rejestracja_Umowa_o_prace_okr" />
@@ -351,18 +387,10 @@
     <entry file="file://$PROJECT_DIR$/selenium-screenshot-3.png" />
     <entry file="file://$PROJECT_DIR$/selenium-screenshot-5.png" />
     <entry file="file://$PROJECT_DIR$/selenium-screenshot-7.png" />
-    <entry file="file://$PROJECT_DIR$/geckodriver.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/geckodriver.log" />
     <entry file="file://$PROJECT_DIR$/Test Case Order" />
     <entry file="file://$PROJECT_DIR$/Resources/UoP_nokr.robot" />
-    <entry file="file://$PROJECT_DIR$/ResetHasla_klient.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Reseth_hasla_klient.robot" />
     <entry file="file://$PROJECT_DIR$/Rejestracja.robot" />
     <entry file="file://$PROJECT_DIR$/Resources/Bledy.robot">
       <provider selected="true" editor-type-id="text-editor">
@@ -371,44 +399,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UsunUsera.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logowanie_klient.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_adres.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="77" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_zatrudnienie.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_wydatki.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/UsunUsera.robot" />
+    <entry file="file://$PROJECT_DIR$/Logowanie_klient.robot" />
     <entry file="file://$PROJECT_DIR$/Resources/Zatrudnienie.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -419,47 +411,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/K_dodaj_karte.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja1_klient.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_dane.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logowanie_pracownik.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rejestracja_klient.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dodaj_karte_klient.robot" />
+    <entry file="file://$PROJECT_DIR$/Logowanie_pracownik.robot" />
+    <entry file="file://$PROJECT_DIR$/Test1_E2E.robot" />
     <entry file="file://$PROJECT_DIR$/Resources/Keywords.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -470,14 +424,41 @@
     <entry file="file://$PROJECT_DIR$/Resources/Keywords_rejestracja.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2346">
-          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test1_E2E.robot">
+    <entry file="file://$PROJECT_DIR$/Rejestracja1_klient.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="85" column="94" selection-start-line="85" selection-start-column="94" selection-end-line="85" selection-end-column="94" />
+        <state relative-caret-position="593">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_adres.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_dane.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_wydatki.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-444" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rejestracja2_klient_zatrudnienie.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rejestracja_klient.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>

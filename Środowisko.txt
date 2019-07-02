@@ -1,0 +1,34 @@
+Instalacja i konfiguracja:
+
+1. Zainstaluj Phyton i PiP 
+Pobierz najnowszą wersję Phytona: https://www.python.org/downloads/
+Rozpocznij instalację jako administrator - wybierz ścieżkę i upewnij się że podczas rejestracji została wybrana instalacja wraz z pip. (domyślnie ustawione)
+Zweryfikuj czy ścieżka katalogu pythona została dodana do systemowych zmiennych środowiskowych, jeśli nie, to ją dodaj. 
+W wierszu poleceń wpisz komendy:
+python -V - aby zweryfikować wersję zainstalowanego pythona
+pip -V  - aby zweryfikować wersję pip
+pip list  - zwróci informację jeśli posiadamy nieaktualną wersję pip
+
+2. Zainstaluj RF oraz biblioteki z użyciem PIP
+Otwórz wiersz poleceń 
+Wpisz pip install robotframework ->  <Enter>
+Wpisz pip install robotframework-seleniumlibrary -> <Enter>
+Biblioteka Selenium http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
+
+3. Zainstaluj aplikację PyCharm https://www.jetbrains.com/pycharm/download/#section=windows
+
+4. Zainstaluj plugin Intellibot 
+Open file -> Settings -> Plugins -> wyszukaj i zainstaluj Intellibot
+Zresetuj PyCharm
+
+5. Zainstaluj sterowniki do przeglądarek: 
+Utwórz na dysku C folder: c:\bin
+Dodaj lokalizację tego folderu jako zmienna środowiskowa.
+Idź na https://www.seleniumhq.org/download/ i pobierz pliki wybranych przeglądarek. (dla IE wybierz wersję 32 bit)
+Wypakuj zawartość pobranych plików w utworzonym folderze bin.
+
+6. Otwórz projekt “Funeda Tests”
+File -> Open -> Ścieżka do folderu z projektem “Funeda Tests” -> OK
+
+Jeśli po drodze nie pojawiły się żadne niestandardowe problemy, aby odpalić wybrane scenariusze można skorzystać z gotowego pliku w projekcie “RunTestCases” wywołujący określone w nim scenariusze, lub za pomocą komendy  w terminalu aplikacji PyCharm robot:
+np. robot Rejestracja_klient.robot
